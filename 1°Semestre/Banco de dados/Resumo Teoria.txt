@@ -1,0 +1,34 @@
+
+Key words: Redundância e regra de negócios
+
+Dado->informação->conhecimento (->ideia->sabedoria)
+
+Tipos de SGBD
+
+Modelo hierárquico:
+-Primeiro a ser utilizado
+-Registro pai e registros filhos
+-Representado como galhos de árvores
+
+Modelo em rede
+-Eliminação de hierarquia
+-Um registro possui váriasassociações
+-Representado por meio de grafos
+
+Modelo relacional
+-Dados armazenados em forma de tabelas
+-Relação é constítuida por um ou mais atributos (campos)
+
+Modelo orientado a objeto
+-Uso de linguagem de programação orientadas a objetos
+-Utilizado em aplicações especializadas
+-Representado por diagramas de classes UML (Unified Modeling Language)
+
+
+DDL - Data Definition Language
+Instruções do SQL para criação, alteração da estrutura e eliminação das tabelas.
+  CREATE, ALTER, DROP
+  
+DML - Data Manipulation Language
+Instruções para manipulação das tabelas, inserir, atualizar, excluir e consultar dados.
+  INSERT, UPDATE, DELETE, SELECT
