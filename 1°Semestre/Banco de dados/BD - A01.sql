@@ -1,6 +1,9 @@
+-- Criar e usar database sprint1
 
 create database sprint1;
 use sprint1;
+
+-- Criar tabela atleta
 
 create table atleta(
 idAtleta int primary key,
@@ -18,7 +21,7 @@ update atleta set data_medalha ='2000-12-30 12:13:12' where idAtleta = 101;
 update atleta set data_medalha='2020-2-4' where idAtleta in (102,103);
 
 
-
+-- inserir dados na tabela
 insert into atleta values
 	('101','Usain Bolt','atletismo','8');
 
@@ -35,22 +38,40 @@ insert into atleta values
     ('109','Larysa Latynina','ginástica artística','18'),
     ('110','Michael Phelps','natação', '28');
 
+-- Exibir todos os dados da tabela
     select * from atleta;
+
+-- Exibir categorias nome e quantidade de medalhas da tabela
     select nome,qtdMedalha from atleta;
+    
+-- Exibir dados dos atletas que praticam natação
     select * from atleta where modalidade='natação';
+    
+-- Exibir dados dos atletas em ordem alfabetica da modalidade que pratica    
     select * from atleta order by modalidade, nome asc;
+
+-- Exibir dados dos atletas em ordem descresente da quantidade de medalhas
     select * from atleta order by qtdMedalha desc;
+
+-- Exibir dados dos atletas que possuem a letra 'n" no nome
     select * from atleta where nome like'%n%';
+    
+-- Exibir dados dos atletas que o nome comece com a letra "m"    
     select * from atleta where nome like'M%';
+    
+-- Exibir dados dos atletas que o nome termine com a letra "o"    
     select * from atleta where nome like'%o';
+
+-- Exibir dados dos atletas que o nome tenha como penúltima letra a letra "o"
     select * from atleta where nome like '%o_';
     
-    -- Diferente de atletismo
+-- Diferente de atletismo
     select * from atleta where modalidade != "atletismo";
-	-- Atletas com mais de 15 medalhas
-	select * from atleta where qtdMedalha >= 15;
     
+-- Atletas com mais de 15 medalhas
+    select * from atleta where qtdMedalha >= 15;
     
+-- Deletar tabela atleta    
  drop table atleta;
  
  create table musica (
