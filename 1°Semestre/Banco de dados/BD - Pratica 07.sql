@@ -22,7 +22,7 @@ foreign key (fktime) references timeF(idTime)
 )auto_increment=100;
 
 create table seguidor 
-(idseguidor int auto_increment,
+(idseguidor int,
 fkjogador int,
 nomeSeguidor varchar(45),
 nickName varchar(45),
@@ -54,15 +54,15 @@ insert into jogador (fktime,nomeJogador,posicao,salario,idconselheiro) values
     
     
     select* from jogador;
-insert into seguidor (fkjogador,nomeSeguidor,NickName,sexo) values
-(100,'Manuel Dias','MD','m'),
-(100,'Maria Dias','MaryDi','f'),
-(100,'Pablo Sierra','PablitoS','m'),
-(100,'Florencia Torres ','Flor','f'),
-(108,'João Silva','Jão','m'),
-(108,'Maria Silva','Naymazete','f'),
-(108,'Bruno Canet','Brunin','m'),
-(108,'Gabriel Caneco','Caneco','n');
+insert into seguidor values
+(1,100,'Manuel Dias','MD','m'),
+(2,100,'Maria Dias','MaryDi','f'),
+(3,100,'Pablo Sierra','PablitoS','m'),
+(4,100,'Florencia Torres ','Flor','f'),
+(1,108,'João Silva','Jão','m'),
+(2,108,'Maria Silva','Naymazete','f'),
+(3,108,'Bruno Canet','Brunin','m'),
+(4,108,'Gabriel Caneco','Caneco','n');
 
 
 -- Exibir todos os dados de cada tabela criada, separadamente.
