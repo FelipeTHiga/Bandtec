@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantos escudos deseja? <input id="in_numero_escudos"> <br>
+    Quantos escudos por linha? <input id='in_itens_linha'> <br>
+    Qual o tamanho dos escudos?
+
+    <select name="" id="in_tamanho">
+        <option value="50">Pequeno</option>
+        <option value="100">Médio</option>
+        <option value="200">Grande</option>
+    </select>
+    <br>
+    URL da imagem <input type="text" id="url_img">
+
+    <button onclick="escudos()">Amo meu time</button>
+
+
+    <div id="div_escudos" style="width: 200px;"></div>
+
+</body>
+
+</html>
+
+
+<script>
+//./escudo.jpg
+    function escudos() {
+
+        var n_escudos = Number(in_numero_escudos.value)
+        var itens_por_linha = Number(in_itens_linha.value)
+        var tamanho_escudos = Number(in_tamanho.value)
+        var caminho_imagem= url_img.value
+
+        div_escudos.style.width = `${itens_por_linha * tamanho_escudos}px`
+
+        div_escudos.innerHTML = ""
+
+        for (contador = 0; contador < n_escudos; contador++) {
+            div_escudos.innerHTML += `<img src="${caminho_imagem}" style="width:${tamanho_escudos}px">`
+
+        }
+
+        //  var deve_quebrar_linha=((contador+1)-) % itens por linha==0);
+        // if (deve_quebrar_linha){
+        // div_escudos.innerHTML+= <br>
+
+    }
+
+
+        
+
+
+</script>

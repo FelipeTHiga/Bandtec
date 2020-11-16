@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input onkeyup="analisar_texto()" id="in_frase">
+
+    <div id="div_display"></div>
+
+
+</body>
+</html>
+
+<script>
+function analisar_texto(){
+    var frase= in_frase.value
+    div_display.innerHTML=""
+    // var comeca_com_A= frase.length.startWhith('A')
+
+    div_display.innerHTML+=`Começa com a? ${frase.startsWith('a')}<br>`
+
+    div_display.innerHTML+=`Qual a última letras? ${frase[frase.length-1]} <br>`;
+
+    div_display.innerHTML+=`Qual a 1º letras? ${frase[0]}<br>`
+
+    div_display.innerHTML+=`Qual a 3º letras? ${frase[2]}<br>`
+
+    var posicao_letra_a = frase.indexOf('a')
+
+    if (posicao_letra_a<0){
+        posicao_letra_a='Não existe.'
+    }
+    div_display.innerHTML+=`Onde está a primeira letra "a"? ${posicao_letra_a} <br>`
+}
+
+
+
+</script>
