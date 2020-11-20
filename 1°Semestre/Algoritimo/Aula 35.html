@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 35</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+</style>
+
+<body>
+    <input placeholder="Informe um país para viajar" id="in_pais"><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="ver_destino()">Ver destino</button>
+
+    <div id="div_destino"></div>
+
+</body>
+
+</html>
+
+<script>
+    var paises = []
+    function cadastrar() {
+        var novo_pais = in_pais.value
+
+        paises.push(novo_pais)
+        console.log(paises)
+
+
+    }
+
+    function ver_destino() {
+        div_destino.innerHTML = ''
+
+        for (posicao = 0; posicao < paises.length; posicao++) {
+
+            if (posicao % 2 == 0) {
+                div_destino.innerHTML += `<b>${paises[posicao]}</b> <br>`
+            }
+            else{
+                div_destino.innerHTML += `${paises[posicao]} <br>`
+
+
+            }
+
+
+
+        }
+
+
+    }
+
+
+
+
+</script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 34</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+.main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    }
+
+
+
+
+</style>
+
+<body>
+
+    <div class="main">
+
+        <div class="conteudo">
+
+            <input placeholder="cadastre uma fruta" id="in_fruta">
+
+            <button onclick="cadastrar()">
+                Cadastrar fruta
+            </button>
+
+            <div id="div_display"></div>
+            <div id="div_terceira_fruta"></div>
+            <div id='div_total'></div>
+            <div id="div_comer_fruta"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    // vetor
+    var frutas = [];
+
+
+    function cadastrar() {
+
+        var nova_fruta = in_fruta.value;
+
+
+        console.log(frutas);
+
+        // push insere um elemento em um vetor
+
+        // for (contador = 1; contador <= frutas.length; contador++) {
+
+        //     if (frutas[frutas.length - contador] == nova_fruta) {
+        //         alert('fruta já existente')
+        //         break
+        //     }
+        // }
+
+        frutas.push(nova_fruta);
+
+        div_display.innerHTML = `
+        Primeira fruta: ${frutas[0]}<br>
+        Última fruta: ${frutas[frutas.length - 1]}`
+
+        div_terceira_fruta.innerHTML = "Terceira fruta: Ainda não tem "
+
+        var total_pagar = (frutas.length * 2.5).toFixed(2)
+
+
+        if (frutas.length >= 3) {
+            div_terceira_fruta.innerHTML = `Terceira fruta: ${frutas[2]}`
+        }
+
+        if (frutas.length >= 5) {
+            total_pagar = total_pagar - 1
+        }
+
+        if (frutas.length >= 10) {
+            total_pagar = total_pagar - 2
+        }
+
+
+        div_total.innerHTML = `Total a pagar: R${total_pagar}`
+
+        if (frutas.length % 4 == 0) {
+            div_comer_fruta.innerHTML = 'Nossa, você come fruta,hein?'
+
+        } else {
+            div_comer_fruta.innerHTML = ''
+
+        }
+
+
+
+    }
+
+
+
+</script>
