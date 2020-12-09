@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+
+<body>
+
+    <div id="div_display">
+        Saldo: R$ 0.00 <br>
+        Depósitos: 0 <br>
+        Saques: 0 <br>
+    </div>
+
+    <button onclick="depositar()">
+        Depositar R$100,00
+    </button>
+
+
+    <button onclick="sacar()">
+        Sacar R$20,00
+    </button>
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    var poupanca = {
+        saldo: 0,
+        depositos: 0,
+        saques: 0
+    };
+
+    function exibir() { 
+        div_display.innerHTML=`
+        Saldo: R$ ${poupanca.saldo.toFixed(2)}<br>
+        Depósitos: ${poupanca.depositos} <br>
+        Saques: ${poupanca.saques} <br>
+        `
+    }
+
+    function depositar() {
+        poupanca.saldo += 100;
+        poupanca.depositos++;
+
+        exibir();
+    }
+
+    function sacar(){
+        poupanca.saldo-=20;
+        poupanca.saques++;
+
+        exibir();
+    }
+
+</script>
+
+<!-- 5. Crie um programa que simule o uso de uma conta Poupança de banco do usuário.
+Ela deve ter as seguintes informações na tela:
+    Saldo: R$ 0.00
+    Depósitos: 0
+    Saques: 0
+Abaixo dessas informações, devem haver os botões: "Depositar 100" e "Sacar 20".
+Ao clicar no primeiro botão, o saldo na tela atualiza aumentando em 100 e o número de depósitos aumenta em 1.
+Ao clicar no segundo botão, o saldo na tela atualiza reduzindo em 20 e o número de saques aumenta em 1.
+ -->

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira um aluno <input type="text" id="in_aluno">
+    <button onclick="inserir()">Inserir</button>
+    <button onclick="pesquisar()">Pesquisar</button>
+
+    <div id="div_display"></div>
+
+</body>
+
+</html>
+
+<script>
+    var alunos = []
+    var jainserido = false
+
+    function pesquisar() {
+        let novo_aluno = in_aluno.value
+        let  repete = 0
+        for (contador_aluno = 1; contador_aluno <= alunos.length; contador_aluno++) {
+
+            // if (novo_aluno == alunos[contador_aluno]) {
+            //     alert(`Aluno ${alunos[contador_aluno]} já inserido`)
+            //     break
+            // }
+           
+            if (novo_aluno == alunos[contador_aluno]) {
+               
+               repete++
+            }
+        }
+
+        alert(repete)
+
+
+    }
+
+
+    function inserir() {
+        let novo_aluno = in_aluno.value
+
+        alunos.push(novo_aluno)
+        
+        div_display.innerHTML=""
+
+        for (contador_aluno = 1; contador_aluno <= alunos.length; contador_aluno++) {
+
+            // if (novo_aluno == alunos[contador_aluno]) {
+            //  alert()
+            // }
+
+            div_display.innerHTML+=`${alunos[alunos.length-contador_aluno] }<br>`
+
+
+        }
+
+        
+
+
+        console.log(alunos)
+    }
+
+
+
+</script>
+
+<!-- 6. Crie um programa em HTML/JS em que:
+
+a) Tenha uma lista de alunos e um botão para cadastrar novos (mostre como a lista está a cada novo aluno inserido).
+
+b) Ao tentar inserir um aluno, verifique se já não existe na lista - caso exista, não insira-o.
+
+c) Tenha um campo para pesquisar alunos, onde o usuário possa verificar se o aluno em questão já existe (se existir, exiba um alert com a frase "O aluno X já existe na lista").
+
+*Obs o campo para pesquisar alunos pode ser o mesmo para inserir novo -->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02
+    </title>
+</head>
+
+<body>
+    <input type="text" id="in_texto">
+    <button onclick="filosofar()">Filosofar</button>
+    <div id="div_display"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function filosofar() {
+        var contar = 0
+
+        div_display.innerHTML = ""
+
+        if (in_texto.value == "") {
+            alert('Mas qual frase?')
+        }
+
+        else {
+
+            while (contar < 7) {
+                div_display.innerHTML += `${in_texto.value}<br>`
+                contar++
+            }
+
+        }
+
+
+    }
+
+
+
+
+</script>

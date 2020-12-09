@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de velocidade media</title>
+</head>
+<body>
+    
+    <!-- Imagens e texto para título da página -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSHgndstPwjeDLUNWsaMcyjkkaQCBJFM7eZ2g&usqp=CAU" 
+    style='width: 50px;float: left;' alt="coiote correndo">
+    
+    <h2 style="float: left;">Calculadora de velocidade média</h2>
+        
+    <img src="https://i.pinimg.com/originals/31/08/36/31083669623c55a9ebe836334a0e1492.png" style="width: 50px;"
+    alt="papa léguas correndo">
+    
+    <br> <br> <br>
+    
+    <!-- Explicação do padrão dos dados que usuário deverá inserir -->
+    <b style="color: red;">ATENÇÃO:</b>
+        
+   Os valores relacionados a tempo devem estar em <b>horas</b> e os valores relacionados a posição em <b>quilômetros</b>
+    
+    <br><br>
+
+    <!-- Campos para inserção de dados -->
+    
+    Velocidade média =
+    (<input id="s_f" placeholder="Posição final"> 
+    <b>-</b>
+    <input id="s_i" placeholder="Posição inicial">)
+    
+    <b>/</b>
+    
+    (<input id="t_f" placeholder="Tempo final">
+    <b>-</b>
+    <input id="t_i" placeholder="Tempo inicial">)
+    
+    <br>
+    <br>
+
+    <!-- Botão para efetuar o cálculo da velocidade média -->
+    <button onclick="velocidade_media()" id="botao_resultado">Exibir velocidade media (km/h)</button>
+    <br>
+    <br>
+    
+    <!-- div para exibição de resultados -->
+    <div id="resultado"></div>
+    <br>
+
+    <!-- Botão para caso o usuário deseje converter o resultado de km/h para m/s -->
+    <button onclick="conversao_ms()" style="display: none;" id="botao_conv">Converter para metros por segundo</button>
+
+</body>
+</html>
+
+<script>
+
+    // Função para cálculo da vm, exibir resultado na div e mostrar o botão para conversão do resultado
+    function velocidade_media(){
+        var vm= (s_f.value-s_i.value)/(t_f.value-t_i.value);
+        resultado.innerHTML=`Sua velocidade média é igual a <b style="color:red;">${vm}</b> <b style="color:orange;"><u> km/h </b></u> `;
+        botao_conv.style.display="block"
+    }
+
+    // Função para calcular a conversão para m/s, exibir resultado na div e ocultar o botão de conversão
+    function conversao_ms(){
+       // A conversão de km/h para m/s é feita dividindo o valor em km/h por 3,6
+        var ms = (s_f.value-s_i.value)/(t_f.value-t_i.value)/3.6
+        resultado.innerHTML =`Sua velocidade média é igual a <b style="color:blue;">${ms}</b> <b style="color:purple;"><u> m/s </b></u>`;
+        botao_conv.style.display='none';
+
+    }
+        
+
+
+</script>

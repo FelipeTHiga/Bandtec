@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04
+    </title>
+</head>
+
+<body>
+    digite a tabuada:
+    <input id='in_tabuada'> <br>
+    <button onclick="tabuada()">Calcular</button>
+    <div id="div_resultado"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function tabuada() {
+        var base=1
+        div_resultado.innerHTML=""
+
+        while(base<=10){
+            var resultado=in_tabuada.value*base
+            div_resultado.innerHTML+=`${in_tabuada.value}*${base}=${resultado}<br>`
+            base++
+
+        }
+
+    }
+
+
+</script>

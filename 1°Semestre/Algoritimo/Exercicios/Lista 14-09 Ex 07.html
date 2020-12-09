@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforos - Aprendendo a atravessar</title>
+</head>
+<body>
+    <div><img src="https://images.emojiterra.com/google/android-pie/512px/1f534.png" 
+              alt="círculo vermelho" 
+              style="width: 150px;"
+              onclick="pare()"></div>
+    
+    <div id="vermelho"><b style="color: rgba(206, 6, 6, 0.445);">Pare! Aguarde o verde!</b></div>
+
+    
+    <div><img src="https://images.emojiterra.com/google/android-10/512px/1f7e1.png" 
+              alt="círculo amarelo" 
+              style="width: 150px;"
+              onclick="atencao()"></div>
+  
+    <div id=amarelo><b style="color: rgba(179, 179, 10, 0.527);">Só siga se estiver perto e rápido.</b></div>
+
+    
+    <div><img src="https://images.emojiterra.com/google/android-10/512px/1f7e2.png" 
+              alt="círculo verde"   
+              style= "width: 150px;"
+              onclick="siga()"></div>
+  
+    <div id="verde"><b style="color: rgba(0, 128, 0, 0.432)">Siga :)</b></div>
+
+</body>
+</html>
+
+<script>
+function pare(){
+    vermelho.innerHTML="<b style='color: red'>Pare! Aguarde o verde!</b>"
+    verde.innerHTML='<b style="color: rgba(0, 128, 0, 0.432)">Siga :)</b>'
+    amarelo.innerHTML='<b style="color: rgba(179, 179, 10, 0.527);">Só siga se estiver perto e rápido.</b>'
+}
+
+function atencao(){
+    amarelo.innerHTML='<b style="color: rgb(179, 179, 10);">Só siga se estiver perto e rápido.</b>'
+    verde.innerHTML='<b style="color: rgba(0, 128, 0, 0.432)">Siga :)</b>'
+    vermelho.innerHTML='<b style="color: rgba(128, 0, 0, 0.445);">Pare! Aguarde o verde!</b>'
+}
+
+function siga(){
+    verde.innerHTML='<b style="color: green">Siga :)</b>'
+    vermelho.innerHTML='<b style="color: rgba(128, 0, 0, 0.445);">Pare! Aguarde o verde!</b>'
+    amarelo.innerHTML="<b style='color: rgba(179, 179, 10, 0.527);'>Só siga se estiver perto e rápido.</b>"
+}
+</script>

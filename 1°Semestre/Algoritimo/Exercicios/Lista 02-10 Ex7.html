@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    Insira os dados de sua PG:
+    <input id='in_primeiro_termo' placeholder = 'Primeiro número da progressão' >
+    <input id='in_razao' placeholder = 'Razão'> 
+    <br><br>
+
+    Qual termo da progressão você deseja ver?
+    
+    <input id="in_termo"> 
+    
+    <button onclick="calcular()">Calcular PG</button>
+    <div id="div_resultado"></div>
+
+    
+</body>
+</html>
+
+
+<script>
+    function calcular(){
+        var primeiro_termo = Number(in_primeiro_termo.value)
+        var razao = Number(in_razao.value)
+        var termo = Number(in_termo.value)
+        var resultado = primeiro_termo * razao**(termo-1)
+        div_resultado.innerHTML = `${resultado}`
+
+    }
+
+
+
+
+</script>

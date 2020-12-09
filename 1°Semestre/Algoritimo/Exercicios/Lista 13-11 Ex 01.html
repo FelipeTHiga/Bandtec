@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="sorteio()">Sorteio</button>
+    <button onclick="sorteio0a10()">Sorteio 0 a 10</button>
+    <button onclick="sorteio1a10()">Sorteio 1 a 10</button>
+    <button onclick="sorteio5a9()">Sorteio 5 a 9</button>
+    <button onclick="sorteio50a50()">Sorteio -50 a 50</button>
+
+    <div id="div_display"></div>
+
+
+</body>
+
+</html>
+
+
+<script>
+    function sorteio() {
+        var numero = Math.random()
+        div_display.innerHTML = `${numero.toFixed(4)}`
+    }
+
+    function sorteio0a10() {
+        var numero = Math.random() * 10
+        div_display.innerHTML = `${numero.toFixed(0)}`
+    }
+
+    function sorteio1a10() {
+        var numero = (Math.random() * 9 + 1).toFixed(0)
+        div_display.innerHTML = `${numero}`
+    }
+
+    function sorteio5a9() {
+        var numero = (Math.random() * 4 + 5).toFixed(0)
+        div_display.innerHTML = `${numero}`
+
+    }
+
+    function sorteio50a50(){
+
+        var numero=(Math.random()*100-50).toFixed(0)
+
+        div_display.innerHTML+=`${numero} `
+
+    }
+
+
+    //   Usando paseInt 
+    // function sorteio5a9(){
+    //     var numero= parseInt(Math.random()*5+5)
+    //     div_display.innerHTML+=`${numero} `
+
+    // }
+
+    // function sorteio1a10(){
+    //     var numero = parseInt(Math.random()*10+1)
+    //     div_display.innerHTML+=`${numero} `
+    // }
+
+    // function sorteio0a10(){
+    //     var numero = parseInt(Math.random()*11)
+    //     div_display.innerHTML+=`${numero} `
+    //  }
+
+    // function sorteio50a50() {
+
+    //     var numero = parseInt(Math.random() * 101 - 50)
+
+    //     div_display.innerHTML += `${numero} `
+
+    // }
+
+</script>

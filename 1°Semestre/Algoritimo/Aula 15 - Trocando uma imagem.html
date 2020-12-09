@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Mudança de tempo</h3>
+    <button onclick="nublado()"> Mudar para nublado </button>
+    <button onclick="chuvoso()">Mudar para chuvoso</button>    
+
+<br>
+<br>
+
+    <img id='img_clima' alt="Imagem de dia ensolarado" src="./ensolarado.jpg" style="height: 200px;">
+
+</body>
+</html>
+
+<script>
+function nublado(){
+    img_clima.src='https://www.jornalcruzeiro.com.br/wp-content/uploads/2019/04/tempo-bublado-980.jpg';
+    img_clima.alt = 'Imagem de dia nublado'
+}
+
+function chuvoso(){
+    img_clima.src = 'https://cdn.abcdoabc.com.br/Chuvas-fortes_f2591f97.jpg'
+    img_clima.alt = 'Imagem de dia chuvoso'
+}
+
+</script>

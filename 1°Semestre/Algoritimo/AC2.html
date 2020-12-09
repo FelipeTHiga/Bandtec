@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Continuada 2</title>
+</head>
+
+<body>
+
+    <p>
+        Fazer login:
+    </p>
+
+    <input id="in_login" placeholder="Nome do usuário"> <br>
+
+    <p>
+        Senha:
+    </p>
+
+    <input id="in_senha" placeholder="Password"> <br>
+
+    <br><br>
+
+    <select id="in_perfil">
+        <option value="0"> -- Selecione o perfil da conta -- </option>
+        <option value="usuario"> Usuário </option>
+        <option value="usuarioPremium"> Usuario Premium </option>
+        <option value="administrador"> Administrador </option>
+    </select>
+
+    <button onclick="entrar()">Entrar</button>
+    <button>Limpar</button>
+    <div id="div_display"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    // Combinações de usuários válidas (login,senha e perfil)
+    //       Login: felipehiga senha: felipe123 perfil: usuário
+    //       Login: felipremium senha: premium321 perfil: usuário premium
+    //       Login: higadm senha: aDm!@# perfil: administrador
+
+    function entrar() {
+
+        var perfil = in_perfil.value
+        var login = in_login.value
+        var senha = in_senha.value
+
+        if (
+            (login == 'felipehiga' && senha == 'felipe123' && perfil == 'usuario') ||
+            (login == 'felipremium' && senha == 'premium321' && perfil == 'usuarioPremium') ||
+            (login == 'higadm' && senha == 'aDm!@#' && perfil == 'administrador'))
+        
+            {
+                div_display.innerHTML=`Olá, ${login}! Você entrou com o perfil ${perfil}`
+                
+
+            }
+
+    }
+
+
+</script>

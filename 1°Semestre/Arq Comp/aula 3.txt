@@ -1,0 +1,11 @@
+node --version
+node package manager
+
+oscilação
+aguardar 60 minutos pra obter a média acumulada 
+
+controller cria a forma de captura de dados da média
+
+index.js - parâmetros dos sensores virtuais, atributos
+
+cada função é um sensor

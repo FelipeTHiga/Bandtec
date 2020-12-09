@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<body>
+    
+    <img src="http://moodle.bandtec.com.br/pluginfile.php/1/theme_eduhub/logo/1596485112/BLogo-Moodle-01-01.png" alt="">
+    
+    <center>
+        <div style="height: 50px; width: 500px;"></div>
+        
+        <b style="font-family:Arial, Helvetica, sans-serif ; font-size: x-large; color: rgb(0,186,207);">
+            Insira um valor em decimal: </b> 
+        
+        <br><br>
+        <input id='decimal' placeholder="Decimal"> <button onclick="limpar()"> Limpar</button>
+    
+        <br><br>
+        
+        <b style="font-family:Arial, Helvetica, sans-serif ; font-size: large; color: rgb(0,186,207);">
+            Converter para:</b>
+
+        <br><br>
+
+        <button onclick="binario()"><b style="font-family:Arial, Helvetica, sans-serif ;">Binario</b></button><br>
+        <div id="r_bin"></div>
+    
+        <br><br>
+        
+    <button onclick="octal()"><b style="font-family:Arial, Helvetica, sans-serif ;"> Octal</b></button><br>
+    
+    <div id="r_oct"></div>
+    
+    <br><br>
+    
+        <button onclick="hexadecimal()"><b style="font-family:Arial, Helvetica, sans-serif ;"> Hexadecimal</b></button><br>
+       
+            <div id="r_hex"></div>
+
+    </center>   
+
+    <div style="height: 120px; width: 500px;"></div>
+    
+    <div>
+        <span style="font-family:Arial, Helvetica, sans-serif ;">
+        Felipe Higa <br>
+        Larissa Lima <br>
+        Victor Veniti <br>
+        Miguel Nunes <br>
+        Vitória Souza <br>
+        </span>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    function binario(){
+        var bin=Number(decimal.value).toString(2);
+        console.log(bin);
+        r_bin.innerHTML=`<br>${bin}`;
+    }
+
+
+    function octal(){
+        var oct=Number(decimal.value).toString(8);
+        console.log(oct);
+        r_oct.innerHTML=`<br>${oct}`;
+    }    
+
+    function hexadecimal(){
+        var hex=Number(decimal.value).toString(16)
+        console.log(hex)
+        r_hex.innerHTML=`<br>${hex}`
+    }
+
+    function limpar(){
+        r_hex.innerHTML=''
+        r_oct.innerHTML=''
+        r_bin.innerHTML=''
+    }
+
+
+</script>

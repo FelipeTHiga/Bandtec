@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    Insira suas Notas
+    <br><input id="in_nota1" placeholder="nota 1">
+    <br><input id="in_nota2" placeholder="nota 2">
+    <br>
+    
+    <button onclick="media()">Avaliar</button>
+    <div id='div_media'></div>
+    <span id='span_media'></span>
+</body>
+</html>
+
+<script>
+    function media(){
+        var nota1 = Number(in_nota1.value)
+        var nota2 = Number(in_nota2.value)
+        var media = (nota1+nota2)/2
+        
+        span_media.innerHTML = `sua média foi ${media}`
+        
+        if(media>=6){
+            div_media.innerHTML='Parabéns, aprovado(a)'
+        } else {
+            div_media.innerHTML='Tente outra vez'
+
+        }
+
+    }
+
+
+
+</script>

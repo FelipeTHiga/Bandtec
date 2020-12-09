@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+
+<body>
+    <center>
+
+        <h2 id='h2_valor'>Valor guardado no cofrinho: R$0.00</h2>
+        <br><br>
+
+        Qual o valor a ser depositado?
+        <input id='in_deposito'>
+
+        <br><br>
+
+        <button onclick="depositar()">Depositar</button>
+        <button onclick="sacar()">Tirar toda a grana </button>
+
+    </center>
+</body>
+
+</html>
+
+<script>
+    var conta = 0
+
+    function depositar() {
+        var deposito = Number(in_deposito.value)
+        conta += deposito
+
+        h2_valor.innerHTML = `Valor guardado no cofrinho: R$${conta.toFixed(2)}`
+    }
+
+    function sacar() {
+        conta = 0
+        h2_valor.innerHTML = `Valor guardado no cofrinho: R$${conta.toFixed(2)}`
+    }
+
+
+
+
+</script>

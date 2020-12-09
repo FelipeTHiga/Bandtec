@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atleta</title>
+</head>
+<body>
+    <h2>O que faz um triatleta?</h2>
+    <button onclick="nada()">Nada</button>
+    <button onclick="corre()">Corre</button>
+    <button onclick="pedala()">Pedala</button>
+   
+    <br><br>
+    <img id="imagem" style="width: 250px;">
+</body>
+</html>
+
+<script>
+    function corre(){
+        imagem.alt="Pessoa correndo"
+        imagem.src='https://e7.pngegg.com/pngimages/329/798/png-clipart-boston-marathon-running-jogging-5k-run-black-and-white-sport-racing-thumbnail.png'
+    }
+
+    function nada(){
+        imagem.src='https://i.pinimg.com/originals/f3/e7/54/f3e754f6ca21c74150b43ffa8b017b00.jpg'
+        imagem.alt="Pessoa nadando"
+    }
+       
+    
+    function pedala(){
+        imagem.src='https://cdn.pixabay.com/photo/2018/08/10/21/03/silhouette-3597579_1280.png'
+    }
+        
+
+</script>

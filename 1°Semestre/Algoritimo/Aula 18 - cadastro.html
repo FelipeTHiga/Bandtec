@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18 - value de input e interpolação</title>
+</head>
+<body>
+    <h2>Mini cadastro </h2>
+
+    Seu nome:  <input id='in_nome'> <br>
+    Seu bairro:  <input id='in_bairro'> <br>
+    <input id='in_idade' placeholder="Sua idade: " > <br>
+
+    <button onclick="cadastrar()"> 
+        Fazer cadastro
+    </button>
+
+    <button onclick="cadastro_bonitinho()"> 
+        Fazer cadastro bonitinho
+    </button>
+
+    <button onclick="cadastro_lindo()">
+        Fazer cadastro lindo
+    </button>
+
+    <div id="div_cadastro"></div>
+
+</body>
+</html>
+
+<script>
+    function cadastrar(){
+        alert(in_nome.value)
+        alert(in_bairro.value)
+        alert(in_idade.value)
+    }
+    function cadastro_bonitinho(){
+        alert(`Você se chama ${in_nome.value}`)
+        alert(`Você mora no bairro ${in_bairro.value}`)
+        alert(`Você tem ${in_idade.value} anos`)
+    }    
+
+    function cadastro_lindo(){
+        div_cadastro.innerHTML=`<b>${in_nome.value}</b> mora no bairro <b>${in_bairro.value}</b> e tem <b>${in_idade.value}</b> anos <br>
+        <br>
+        <b>Nome cadastrado:</b> ${in_nome.value} <br>
+        <b>Bairro cadastrado:</b> ${in_bairro.value}  <br>
+        <b>Idade cadastrada:</b> ${in_idade.value}   <br>   
+      `;
+    }
+
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+
+<body>
+    Insira o nome do país: <br>
+    <input type="text" id="in_pais">
+
+    <br><br>
+
+    Insira a quantidade de medalhas: <br>
+    <input type="text" id="in_medalha_ouro" placeholder="Medalhas de ouro"> <br>
+    <input type="text" id="in_medalha_prata" placeholder="Medalhas de prata"> <br>
+    <input type="text" id="in_medalha_bronze" placeholder="Medalhas de bronze"> <br>
+
+    <br>
+
+    <button onclick="analisar()">Analisar medalhas</button>
+
+    <div id="div_display"></div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function analisar() {
+        var pais_nome = in_pais.value;
+
+        var medalhas_do_pais = {
+            ouro: Number(in_medalha_ouro.value),
+            prata: Number(in_medalha_prata.value),
+            bronze: Number(in_medalha_bronze.value)
+        }
+
+        medalhas_do_pais.pontos = (medalhas_do_pais.ouro * 10000) + (medalhas_do_pais.prata * 100) + (medalhas_do_pais.bronze * 1)
+
+        div_display.innerHTML = `O país ${pais_nome} tem ${medalhas_do_pais.pontos} pontos até agora`
+    }
+
+
+</script>
+
+<!-- Crie um programa no qual você informa quantas medalhas de ouro, prata e bronze um país já ganhou na olimpíada. Após clicar num botão "Analisar medalhas", exiba uma frase como esta:
+      O país tem X pontos até agora
+Onde X é calculado assim:
+Medalha de ouro: 10000 pontos
+Medalha de prata: 100 pontos
+Medalha de bronze: 1 ponto
+ -->

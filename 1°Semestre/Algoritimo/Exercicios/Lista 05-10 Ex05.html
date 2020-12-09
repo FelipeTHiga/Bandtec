@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+
+<body>
+    <center>
+        Insira a sua dieta diária: <br> <br>
+        Pães franceses: <input type="text" name="" id="in_pao"><br><br>
+        Pacotes de bolacha recheada: <input id="in_bolacha"> <br><br>
+        Copos de achocolatados: <input id="in_achocolatado"><br><br>
+
+        <button onclick="calcular()">Verificar calorias</button>
+        <br><br>
+        <span id="span_display"></span>
+
+    </center>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var calorias = 50 * Number(in_pao.value) + 80 * Number(in_bolacha.value) + 70 * Number(in_achocolatado.value)
+        if (calorias < 200) {
+            span_display.innerHTML = "Parabéns, vai sair em forma da quarentena!"
+        } else if (calorias <= 400) {
+            span_display.innerHTML = 'Cuidado, vai ficar mais "fofinho(a)" após quarentena!'
+            
+        } else{
+            span_display.innerHTML ="Bom, acho que muitos não vão te reconhecer após a quarentena"
+        }
+    }
+
+
+</script>
+
+
+//
+<!-- a) Pergunte quantos pães franceses o usuário tem comido por dia
+// b) Pergunte quantos pacotes de bolacha recheada o usuário tem comido por dia
+// c) Pergunte quantos copos de achocolatado o usuário tem tomado por dia
+// d) Ao clicar em "Verificar calorias", calcule quantas calorias o usuário tem consumido com base nas 3 informações. 
+// Considere que um pão francês tem 50 calorias, um pacote de bolacha, 80 e um copo de achocolatado, 70.
+// e) Após fazer o cálculo, exiba uma dessas frases, abaixo do botão:
+//    "Parabéns, vai sair em forma da quarentena!", caso as calorias sejam menores do que 200.
+//    "Cuidado, vai ficar mais "fofinho(a)" após quarentena!", caso as calorias sejam entre 200 e 400.
+//    "Bom, acho que muitos não vão te reconhecer após a quarentena", caso as calorias sejam mais de 400.
+// f) Faça o teste de mesa para essa questão -->

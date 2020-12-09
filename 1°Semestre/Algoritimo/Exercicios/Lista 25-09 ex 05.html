@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de média</title>
+</head>
+
+<body>
+    Insira suas notas: <br>
+    <input type="text" placeholder="nota 1" id="id_nota1"> <br>
+    <input type="text" placeholder="nota 2" id="id_nota2"><br>
+    <input type="text" placeholder="nota 3" id="id_nota3"><br>
+    <button onclick="analisar()">Analisar desempenho</button>
+    <div id="div_desempenho"></div>
+
+</body>
+
+</html>
+
+<script>
+    function analisar(){
+
+        var nota1 = Number(id_nota1.value)
+        var nota2 = Number(id_nota2.value)
+        var nota3 = Number(id_nota3.value)
+        var media = (nota1 + nota2 + nota3) / 3
+
+        div_desempenho.innerHTML = `<b>Sua média foi ${media}</b>`
+
+        if (media>9.4){
+            div_desempenho.innerHTML+="<br><b>Parabéns, você é fora de série</b>"
+        }
+
+    }
+
+</script>

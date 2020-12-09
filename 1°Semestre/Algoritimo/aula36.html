@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Aula 36</title>
+</head>
+<body>
+    
+    Time 1 <br>
+    <input id="in_vitorias1" placeholder="Número de vitórias"> <br>
+    <input id="in_empates1"  placeholder="Número de empates"><br>
+    <input id="in_derrotas1"  placeholder="Número de empates"><br>
+
+    Time2 <br>
+    <input id="in_vitorias2" placeholder="Número de vitórias"><br>
+    <input id="in_empates2"  placeholder="Número de empates"><br>
+    <input id="in_derrotas2"  placeholder="Número de empates"><br>
+
+    <button onclick="Finalizar()">Finalizar</button>
+
+    <div id="div_display"></div>
+
+</body>
+</html>
+
+
+<script>
+
+    function Finalizar(){
+        // Criando um JSON 'time1' 
+        var time1= {
+            vitorias: in_vitorias1.value,
+            empates: in_empates1.value,
+            derrotas: in_derrotas1.value
+        };
+
+        // Adicionando uma nova propriedade no JSON
+        time1.pts =(time1.vitorias*3)+(time1.empates*1)
+
+
+        var time2= {
+            vitorias: in_vitorias2.value,
+            empates: in_empates2.value,
+            derrotas: in_derrotas2.value
+        };
+
+        time2.pts =(time2.vitorias*3)+(time2.empates*1)
+        
+        // Recuperando os valored do JSON
+
+        div_display.innerHTML= `
+        
+        Time 1: ${time1.vitorias}v - ${time1.empates}e -  ${time1.derrotas}d - ${time1.pts} pts <br>
+        Time 2: ${time2.vitorias}v - ${time2.empates}e -  ${time2.derrotas}d - ${time2.pts} pts
+        
+        
+        `
+
+
+
+
+    }
+
+
+
+</script>

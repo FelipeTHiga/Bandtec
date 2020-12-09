@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+</head>
+<body>
+    <h2>Lista de compras</h2>
+
+    <input placeholder="Insira o nome do produto" id="produto"> <br>
+    <input placeholder="Insira o preço do produto" id="preco" > <br> 
+    <input placeholder="Insira a quantidade do produto" id='qtd'> <br>
+    <br>
+
+    <button id="button_add" onclick="add()">Adicionar</button>
+    <button id="button_fim" onclick="fim()">Finalizar compra</button>
+    <button id="button_new" onclick="reset()">Nova compra</button>
+    <br>
+    <div id="div_lista"></div>
+    <div id="div_total" style="display: none;"></div>
+
+</body>
+</html>
+
+<script>
+    var total_final=0
+    
+    function add(){
+    var total_produto = qtd.value*preco.value    
+    div_lista.innerHTML+=` ${produto.value}: ${qtd.value}x R$${preco.value}= R$${total_produto} <br>`
+    
+
+    total_final = Number(total_final)+ Number (total_produto)
+
+    div_total.innerHTML=`Total final: R$ ${total_final}`
+    }
+
+    function fim(){
+        div_total.style.display='block'
+    }
+    function reset(){
+        total_final=0
+        div_lista.innerHTML=""
+        div_total.style.display='none'
+
+    }
+</script>

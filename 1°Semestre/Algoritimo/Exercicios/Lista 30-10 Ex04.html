@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04
+    </title>
+</head>
+
+<body>
+    <button onclick='verpares()'>ver pares</button>
+
+    <div id="span_display"></div>
+
+</body>
+
+</html>
+
+<script>
+function verpares(){
+    var exibidos=0
+
+    while(exibidos<100){
+        
+        if(exibidos%2== 0){
+         span_display.innerHTML+=`${exibidos} <br>`
+         
+         console.log(exibidos)
+        }
+
+
+         exibidos++
+    }
+
+
+
+
+}
+
+
+
+</script>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Títulos de times</title>
+</head>
+<body>
+
+    <div style="width: 12%; height: 100px; float: left;float: right;">
+    <button onclick="reset()">Resetar programa</button> <br>
+    <button onclick="esconder()" id="button_esconder">Esconder escudos</button> <br> 
+    <button onclick="mostrar()" id ="button_mostrar" style="display: none;">Mostrar escudos</button> <br>
+    </div>
+
+    <div id="escudos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/200px-Palmeiras_logo.svg.png" 
+            alt="Escudo do Palmeiras" 
+            style ="width:100px;float: left; float: right;" 
+            onclick="show_pal()" 
+            id="img_palmeiras">
+        
+        <div style="float: left; float: right; display: none;" id="div_pal">
+            <img src="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2019/04/palmeiras-mundial.jpg" style="height:200px">
+        </div>
+        
+    
+    
+        <img src="https://http2.mlstatic.com/adesivo-corinthians-timo-logo-escudo-24-x-18-centimetros-D_NQ_NP_631159-MLB31208187556_062019-F.jpg"
+            alt="Escudo do Corinthians" 
+            style ="width:100px; float: left; float: right;" 
+            onclick="show_cor()" 
+            id="img_corinthians">
+        
+        <div style="float: left; float: right; display: none;" id='div_cor'>
+            <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">
+            <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">
+        </div>
+        
+        
+        <img src="https://www.santosfc.com.br/wp-content/uploads/2017/08/santos-fc-logo.png"
+            alt="Escudo do Santos FC" 
+            style ="width:100px;float: left; float: right;" 
+            onclick="show_san()" 
+            id="img_santos">
+    
+        <div style="float: left; float: right; display: none;" id="div_san">
+            <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">
+            <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">
+        </div>
+        
+        
+        
+        <img src="https://a2.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F2026.png" 
+            alt="Escudo do São Paulo FC" 
+            style ="width:100px;float: left; float: right;" 
+            onclick="show_sp()" 
+            id="img_sao_paulo">
+        
+        <div style="float: left; float: right; display: none;" id="div_sp">
+            <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">
+            <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">
+            <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">
+    </div>
+</div>     
+
+</body>
+
+</html>
+
+<script>
+    function show_pal(){
+        div_pal.style.display="block";
+    }
+    function show_cor(){
+        div_cor.style.display="block";
+    }
+    function show_san(){
+        div_san.style.display="block";
+    }
+    function show_sp(){
+        div_sp.style.display="block";
+    }
+
+    function reset(){
+        div_cor.style.display='none';
+        div_san.style.display='none';
+        div_pal.style.display='none';
+        div_sp.style.display='none';
+    }
+
+    function esconder(){
+        escudos.style.display="none";
+        button_mostrar.style.display="block";
+        button_esconder.style.display='none';
+    }
+    function mostrar(){
+        escudos.style.display="block";
+        button_mostrar.style.display="none";
+        button_esconder.style.display='block';
+    }
+
+
+</script>

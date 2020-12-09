@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    Insira um número para ver sua tabuada <br>
+
+    <input id="numero"> <button onclick="tabuada()">Ver tabuada</button>
+
+    <div id="resultado"></div>
+
+
+</body>
+</html>
+
+<script>
+    function tabuada(){
+        var nx1 = numero.value*1
+        var nx2 = numero.value*2
+        var nx3 = numero.value*3
+        var nx4 = numero.value*4
+        var nx5 = numero.value*5
+        var nx6 = numero.value*6
+        var nx7 = numero.value*7
+        var nx8 = numero.value*8
+        var nx9 = numero.value*9
+        
+        resultado.innerHTML=`
+        
+        ${numero.value} X 1 = ${nx1}<br>
+        ${numero.value} X 2 = ${nx2}<br>
+        ${numero.value} X 3 = ${nx3}<br>
+        ${numero.value} X 4 = ${nx4}<br>
+        ${numero.value} X 5 = ${nx5}<br>
+        ${numero.value} X 6 = ${nx6}<br>
+        ${numero.value} X 7 = ${nx7}<br>
+        ${numero.value} X 8 = ${nx8}<br>
+        ${numero.value} X 9 = ${nx9}<br>
+        `
+
+
+
+
+    }
+
+
+
+
+
+</script>

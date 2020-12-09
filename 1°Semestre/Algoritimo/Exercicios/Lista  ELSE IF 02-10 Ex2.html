@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+</head>
+<body>
+    Qual o valor máximo cada amigo pode contribuir? <br>
+    <input id="in_cont">
+    <br>
+    Quantos amigos vão 'rachar' a pizza? <br>
+    <input id="in_amigos"> <br>
+    Qual o valor da pizza? <br>
+    <input id="in_valor_pizza">
+
+    <button onclick="calcular()">Vai rolar pizza?</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+        var cont = Number(in_cont.value);
+     
+        var amigos = Number(in_amigos.value);
+     
+        var pizza= Number(in_valor_pizza.value);
+     
+        var conta = pizza/amigos;
+
+        if(conta<=cont){
+            div_resultado.innerHTML = 'UHU! #Partiupizzz!'
+        }   else{
+            in_cont.value = ''
+            in_amigos.value = ''
+            in_valor_pizza.value =''
+
+            div_resultado.innerHTML = 'É... melhor pesquisarmos uma pizza mais barata'
+        }
+
+
+    }
+
+
+
+</script>

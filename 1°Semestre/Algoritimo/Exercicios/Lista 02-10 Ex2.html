@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área circunferência</title>
+</head>
+<body>
+    Insira o raio de uma circunferência: <br>
+    <input id="in_raio" > <br>
+    <button onclick="calcular()">Calcular Área</button><br>
+    <div id='div_display'></div>
+
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+    var raio = Number(in_raio.value)
+    var area = 3.14* raio**2
+    div_display.innerHTML = `Área da sua circunferência: ${area}`
+    }
+
+
+</script>

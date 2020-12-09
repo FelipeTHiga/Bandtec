@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    
+<select name="" id="in_pessoa">
+    <option value="Homem">Homem</option>
+    <option value="Mulher">Mulher</option>
+    <option value="Crianca">Criança </option>
+</select>
+
+
+<button onclick="registrar()">Registrar</button>
+
+
+<button onclick="ver_elevador()">Ver elevador</button>
+
+
+<div id="div_elevador" ></div>
+
+</body>
+</html>
+
+
+<script>
+   
+   var pessoas =[]
+
+    function registrar(){
+        var nova_pessoa = in_pessoa.value
+        pessoas.push(nova_pessoa)
+        console.log(pessoas)
+    }
+
+
+    function ver_elevador(){
+        div_elevador+=
+
+
+
+    }
+
+</script>
+
+
+<!-- 
+3 (desafio). Crie uma tela com uma combo SOMENTE com os itens:
+    Homem
+    Mulher
+    Criança
+Abaixo dessa combo, crie um botão "Entrar no elevador", o qual vai "registrar" em algum lugar o que estava na combo.
+Deve haver um outro botão "Ver elevador". Ao clicar nele, exiba X imagens ou ícones de homens, Y de mulheres e Z de crianças, conforme a quantidade cadastrada de cada um.
+Exiba ainda o seguinte texto:
+   A 1ª pessoa foi um(a) ? (Homem, mulher ou criança)
+   A 4ª pessoa foi um(a) ? (Homem, mulher ou criança)
+   A 7ª pessoa foi um(a) ? (Homem, mulher ou criança)
+   A última pessoa foi um(a) ? (Homem, mulher ou criança)
+Caso não tenham entrado 4 pessoa no elevador, não exiba as 2ª e 3ª frases. Caso não tenham entrado 7 pessoas, não exiba a 3ª frase. -->

@@ -1,0 +1,11 @@
+tag atributo propriedade/valor
+
+Crase: Interpolação
+
+Partes dinâmicas, chamadas expressões, estão sempre entre ${}
+
+//UPPERCASE
+//lowercase
+//kebab-case
+//snake_case
+//camelCase

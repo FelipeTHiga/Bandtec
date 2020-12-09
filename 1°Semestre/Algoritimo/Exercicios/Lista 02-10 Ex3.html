@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um número: <br>
+    <input id='in_number'><br>
+    <button onclick='raizquadrada()'>Exibir sua raiz quadrada</button> <br><br>
+    <div id="div_rquadrado"></div>
+    <button onclick="raizcubica()">Exibir sua raiz cúbica</button>
+    <div id="div_rcubo"></div>
+
+
+
+
+</body>
+</html>
+
+<script>
+
+function raizquadrada(){
+    var numero = Number(in_number.value)
+    var raizquadrada = numero ** (1/2)
+    div_rquadrado.innerHTML= `Raiz quadrada do seu número é ${raizquadrada.toFixed(2)}`}
+
+function raizcubica(){
+    var numero = Number(in_number.value)
+    var raizcubica = numero ** (1/3)
+    div_rcubo.innerHTML= `Raiz cúbica do seu número é ${raizcubica.toFixed(2)}`
+
+}
+
+
+
+</script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+
+<body>
+
+    Porções de pão francês: <span id=span_pao>0</span>
+
+    <br>
+
+    Porções de carne boniva: <span id=span_carne>0</span>
+
+    <br>
+
+    Porções de carne de soja: <span id=span_soja>0</span>
+
+    <br>
+
+    Porções de arroz com feijão: <span id=span_arroz_feijao>0</span>
+
+    <br>
+
+    <b> Total de calorias:
+        <span id=span_calorias>0</span>
+    </b>
+
+    <br><br>
+
+    <button onclick="comer_pao()">
+        Comer um pão francês
+    </button>
+
+    <button onclick="comer_carne()">
+        Comer porção de carne bovina</button>
+
+    <button onclick="comer_soja()">
+        Comer porção de carne de soja
+    </button>
+
+    <button onclick="comer_arroz()">
+        Comer porção de arroz com feijão
+    </button>
+
+    <button onclick="recomecar()">Recomeçar</button>
+
+</body>
+
+</html>
+
+
+
+<script>
+    var calorias = 0
+    var pao = 0
+    var carne = 0
+    var soja = 0
+    var arroz_feijao = 0
+
+    function comer_pao() {
+        calorias += 50
+        pao++
+        span_pao.innerHTML = pao
+        span_calorias.innerHTML = calorias
+    }
+    function comer_carne() {
+        calorias += 100
+        carne++
+        span_carne.innerHTML = carne
+        span_calorias.innerHTML = calorias
+    }
+
+    function comer_soja() {
+        calorias += 30
+        soja++
+        span_soja.innerHTML = soja
+        span_calorias.innerHTML = calorias
+    }
+
+    function comer_arroz() {
+        calorias += 120
+        arroz_feijao++
+        span_arroz_feijao.innerHTML = arroz_feijao
+        span_calorias.innerHTML = calorias
+    }
+    function recomecar() {
+        calorias = 0
+        pao = 0
+        carne = 0
+        soja = 0
+        arroz_feijao = 0
+        
+         span_pao.innerHTML = pao
+        span_carne.innerHTML = carne
+        span_soja.innerHTML = soja
+        span_arroz_feijao.innerHTML = arroz_feijao
+        span_calorias.innerHTML = calorias
+    }
+
+
+</script>

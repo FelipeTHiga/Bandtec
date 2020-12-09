@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+   Insira a quantidade de votos: <br>
+
+   <input id="votosA" placeholder="Votos p/ Zé Buduia"> <br>
+   <input id="votosB" placeholder="Votos p/ Maria Bigodenha"><br>
+   <input id="votosNulos" placeholder="Votos nulos"><br>
+   <input id="votosBrancos" placeholder="Votos brancos"><br>
+
+    <button onclick="resultado()">Resultado da eleição</button>
+    <div id="totalVotos"></div>
+
+
+</body>
+</html>
+<script>
+   
+   
+    function resultado(){
+        var total= Number(votosA.value)+Number(votosB.value)+Number(votosBrancos.value)+Number(votosNulos.value);
+        console.log(total);
+
+        var porcentagemA = votosA.value/total*100
+        console.log(porcentagemA)
+        
+        var porcentagemB = votosB.value/total*100
+
+        var totalInvalidos = Number(votosBrancos.value)+Number(votosNulos.value)
+
+        var porcentagemInvalidos = totalInvalidos/total*100
+        console.log(porcentagemInvalidos)
+
+        totalVotos.innerHTML=`Total de votos <u>${total}</u><br>
+        Zé Buduia: ${porcentagemA}% (${votosA.value} votos) <br>
+        Maria Bigodenha: ${porcentagemB}% (${votosB.value} votos) <br>
+        Votos inválidos: ${porcentagemInvalidos}% (${totalInvalidos} votos)
+        `
+    }
+
+
+
+</script>

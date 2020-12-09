@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantos refris você bebe?</title>
+</head>
+<body>
+    Quantas latinhas de refrigerante você toma por dia? <br>
+    <input type="text" id='in_refri'>
+    <br><br>
+    <button onclick="qtd_refri()">Quantos refris?</button>
+    <div id="divDisplay"></div>
+</body>
+</html>
+
+<script>
+    function qtd_refri(){
+        var refri=Number(in_refri.value)
+        var qtd_refri = refri*365
+        divDisplay.innerHTML=`Você bebe ${qtd_refri} em um ano`
+
+        if(qtd_refri>500){
+            divDisplay.innerHTML+=", cuidado com a diabetes!"
+        }
+
+    }
+
+
+
+</script>

@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    background-color: #ededf3;
+    font-family: 'Roboto', sans-serif;
+}
+
+body h1 {
+    font-family: 'Patrick Hand', cursive;
+    color: #e9e9e9;
+    margin-top: 0;
+    margin-bottom: 30px;
+    background-color: #2b2d42;
+    padding: 0 0 15px 0;
+}
+
+body h2 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    color: #2b2d42;
+}
+
+body table {
+    border-spacing: 0;
+    width: 600px;
+
+}
+
+table {
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 0 30px 30px 30px;
+    background-color: #edf2f4;
+}
+
+body span {
+    font-size: 12px;
+    float: right;
+    position: relative;
+    font-weight: 500;
+    top: 10px;
+}
+
+
+.td_black {
+    background-color: #edf2f4;
+    border: 1px solid #edf2f4;
+    width: 30px;
+    height: 30px;
+
+}
+
+.td_white {
+    background-color: #2ab7ca;
+    border: 0.1px solid #edf2f4;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    height: 700px;
+   
+
+}
+
+.main .questoes {
+    width: 25%;
+    margin-left: 30px;
+    height: 91vh;
+    overflow-y: scroll;
+    background-color: #edf2f4;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 2px;
+}
+
+.main .questoes div {
+    margin: 20px 0;
+}
+
+.main button {
+    border: none;
+    padding: 10px;
+    background-color: #fed766;
+    border-radius: 5px;
+    font-weight: 700;
+    color: black;
+}
+
+.questoes_vertical {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}

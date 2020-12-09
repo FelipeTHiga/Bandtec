@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliques</title>
+</head>
+<body>
+
+    <span id="span_display">Você comeu <b>0</b> bananas </span> <br>
+    <button onclick="clicar()">comer banana</button>
+    
+    <button onclick="aumentar()">aumentar capacidade de comer bananas</button>
+
+</body>
+</html>
+
+<script>
+   
+    var banana = 0
+    var custo
+    var fome = 1
+    var balanceio = 1
+    function clicar(){
+        banana += fome
+        
+        span_display.innerHTML=`Você já comeu <b>${banana.toFixed(1)}</b> bananas`
+
+    }
+
+    function aumentar(){
+        if (banana>=100*balanceio){
+            banana-=100*balanceio
+            balanceio *=1.1
+            fome+=1
+            span_display.innerHTML=`Você já comeu <b>${banana.toFixed(0)}</b> bananas`
+        } else{alert("Você não comeu bananas suficientes") }
+    }
+
+</script>

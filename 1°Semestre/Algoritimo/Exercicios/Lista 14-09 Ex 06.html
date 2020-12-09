@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball z</title>
+</head>
+<body>
+    <div><b>Ki Base do Guerrei Sayajin: 2000</b> <br>
+     <img src="https://lh3.googleusercontent.com/LNfBXTKCMWm8378-3pZyhyK3fa5NOTpy0x5uEE2RZqIwwOuU8UN_aaZWpxi5v1GHF9af8g=s85" 
+          alt="Goku"
+          style="height: 100px;"
+          id="img_goku"
+     >
+    
+    </div>
+    <br> <br>
+    
+    <button onclick="ssj()">Transformar em SSJ</button>
+    <button onclick="ssj2()">Transformar em SSJ2</button>
+    <button onclick="ssj3()">Transformar em SSJ3</button>
+    <button onclick="base()">Voltar para forma base</button>
+
+    <div id="log"></div>
+
+</body>
+</html>
+
+<script>
+
+function ssj(){
+    log.innerHTML='<b style="color: blue;">ki na forma SSJ: 100000 </b>'
+    img_goku.src="https://lh3.googleusercontent.com/byB8Ys0HbxompOfP4FUfJV3BU-au0gmrHp-ktflqy9yohnQLuRX2LD0-ALsHr-BtXVus2A=s85"
+    img.alt="Goku SSJ"
+
+}
+
+function ssj2(){
+    log.innerHTML='<b style="color: yellow; background-color:orange;">ki na forma SSJ: 100000 </b>'
+    img_goku.src="https://lh3.googleusercontent.com/E28ebR5-i1IxsTTFvxTLeSIf46-k8k-A462ZIZUHExFCyvcF5GugybRBLP1MuzvaYUQDow=s85"
+    img.alt="Goku SS2"
+
+}
+function ssj3(){
+    log.innerHTML='<b style="color: orange; background-color:yellow">ki na forma SSJ: 100000 </b>'
+    img_goku.src="https://lh3.googleusercontent.com/SVlsSOYPnjOh3-jZrawmyc9gy8nmpy0y40yHRwBbR3sZvHHUan8oHUHuSNb-id_zbqvZgA=s85"
+    img.alt="Goku SS3"
+
+}
+
+function base(){
+    log.innerHTML=""
+    img_goku.src="https://lh3.googleusercontent.com/LNfBXTKCMWm8378-3pZyhyK3fa5NOTpy0x5uEE2RZqIwwOuU8UN_aaZWpxi5v1GHF9af8g=s85"
+    img.alt="Goku"
+}
+</script>

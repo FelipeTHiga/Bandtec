@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luta
+    </title>
+</head>
+
+<body>
+
+    <center>
+        <button onclick="start()">Iniciar Jogo</button>
+    </center>
+
+    
+        <div style="margin-left:10%; display: none;" id="div_jogo">
+            <div id="div_lutadorA" style="float: left;">
+                <img src='./Imagens/Lista 02-10 Ex14..jpeg' alt="Scorpion" onclick="golpe_a()">
+            </div>
+
+
+            <div style="float: left;">
+                <img src="https://i.pinimg.com/originals/0c/32/d9/0c32d9184850a78e1a230f32c70f4382.jpg" alt=""
+                    style="width: 500px;">
+            </div>
+
+            <div id="div_lutadorB" style="float: left;">
+                <img src="./Imagens/Lista 02-10 Ex14.(2 )jpeg.jpeg" alt="Subzero" onclick="golpe_b()">
+            </div>
+        </div>
+        
+    
+        <div style="height: 10px;background-color: rgba(0, 0, 0, 0);margin-top: 300px;"></div>
+        
+        <div id="div_vidas" style="display: none;">
+            <div id="lifebar_a" style="width: 49%; height: 30px; background-color: rgb(77, 197, 7); float: left;"></div>
+            <div id="lifebar_b" style="width: 49%; height: 30px; background-color: rgb(130, 206, 219); float: right;"></div>
+        </div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    var vida_a = 50
+    var vida_b = 50
+
+    function golpe_a() {
+        vida_a -= 5
+        lifebar_a.style.width = `${vida_a}%`
+    }
+
+    function golpe_b() {
+        vida_b -= 5
+        lifebar_b.style.width = `${vida_b}%`
+
+    }
+    function start(){
+        div_vidas.style='display:"block"'
+        div_jogo.style.display='block'
+    }
+
+</script>

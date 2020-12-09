@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03
+    </title>
+</head>
+
+<body>
+    Insira uma frase:
+    <input type="text" id="in_texto"> <br>
+    Insira quantas vezes repetirá:
+    <input id="in_vezes"> <br>
+
+    <button onclick="filosofar()">Filosofar</button>
+    <div id="div_display"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function filosofar() {
+        var contar = 0
+
+        div_display.innerHTML = ""
+
+
+        if (in_texto.value == "") {
+            alert('Mas qual frase?')
+        }
+
+        else if (in_vezes.value == '') {
+            alert('Mas quantas vezes?')
+        }
+
+        else {
+            while (contar < in_vezes.value) {
+                div_display.innerHTML += `${in_texto.value}<br>`
+                contar++
+            }
+        }
+
+
+    }
+
+
+
+
+</script>

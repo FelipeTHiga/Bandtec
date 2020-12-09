@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+
+<body>
+    <center>
+
+        <h2 id='h2_valor'>Valor guardado no cofrinho: R$0.00</h2>
+        <br>
+        <h3 id='h3_deposito'>Quantidade de depósitos feitos: 0</h3>
+        
+        <h3 id='h3_saque'>Quantidade de saque feitos: 0</h3>
+        <br>
+
+        Qual o valor a ser depositado?
+        <input id='in_deposito'>
+
+        <br><br>
+
+        <button onclick="depositar()">Depositar</button>
+        <button onclick="sacar()">Tirar toda a grana </button>
+
+    </center>
+</body>
+
+</html>
+
+<script>
+    var conta = 0
+    var qtd_deposito = 0
+    var qtd_saque = 0
+
+    function depositar() {
+        var deposito = Number(in_deposito.value)
+        conta += deposito
+        qtd_deposito ++
+
+        h2_valor.innerHTML = `Valor guardado no cofrinho: R$${conta.toFixed(2)}`
+        h3_deposito.innerHTML =`Quantidade de depósitos feitos: ${qtd_deposito}`
+    }
+
+    function sacar() {
+       if(conta>0){
+        conta = 0
+        qtd_saque++ 
+        h2_valor.innerHTML = `Valor guardado no cofrinho: R$${conta.toFixed(2)}`
+        h3_saque.innerHTML =`Quantidade de saques feitos: ${qtd_saque}`
+       } else{
+
+        alert("Não há saldo")
+
+       }
+
+
+    }
+
+
+
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de maçãs</title>
+</head>
+
+<body>
+    Insira quantas maçãs você comprou <br>
+    <input type="text" id="in_maca"><br>
+    <button onclick="calcular()">Finalizar compra</button>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var maca = Number(in_maca.value)
+        var total = maca * 0.75
+
+        if (maca >= 10) {
+            total = maca * 0.68
+        }
+
+
+        alert(`Total a pagar R$${total.toFixed(2)}`)
+    }
+
+
+
+
+</script>

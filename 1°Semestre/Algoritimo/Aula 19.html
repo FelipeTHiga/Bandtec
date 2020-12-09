@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19 - Primeira calculadora</title>
+</head>
+<body>
+   <h2>Insira dois números</h2>
+    Primeiro número <input id="in_n1" placeholder="Digite um número"><br>
+    Segundo número <input id="in_n2" placeholder="Digite um número"><br>
+   
+   
+    <button onclick="subtrair()">Subtrair</button><br>
+    <button onclick="multiplicar()">Multiplicar</button><br>
+    <button onclick="dividir()">Dividir</button><br>
+    <button onclick="potencia()">Potência</button><br>
+    <button onclick="soma()">Somar</button><br>
+
+    <div id="id_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function subtrair(){
+        var subtracao= in_n1.value - in_n2.value;
+        id_resultado.innerHTML = `Subtração: ${subtracao}`;
+    }
+    
+    function multiplicar(){
+        var multiplicacao = in_n1.value * in_n2.value;
+        id_resultado.innerHTML = `Multiplicação: ${multiplicacao}`;
+
+    }
+    
+    function dividir(){
+        var divisao = in_n1.value/in_n2.value;
+        id_resultado.innerHTML = `Divisão: ${divisao}`;
+
+    }
+    
+    function potencia(){
+         var potencia = in_n1.value ** in_n2.value;
+         id_resultado.innerHTML = `Potencia: ${potencia}`;
+     }
+    
+    function soma(){
+        var soma = Number(in_n1.value) +Number(in_n2.value);
+        id_resultado.innerHTML = `Soma:${soma} `
+
+    }
+
+</script>

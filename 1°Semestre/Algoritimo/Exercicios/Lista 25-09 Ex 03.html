@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filhos</title>
+</head>
+<body>
+    Insira a quantidade de filhos que você pussue <br>
+    <input id="in_filhos" type="">
+    <br><br>
+    <button onclick="verificar()">Verificar situação</button>
+    <br><br>
+    <div id="div_display"></div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var filhos = Number(in_filhos.value)
+        
+        if (filhos == 0){
+            div_display.innerHTML= 'Sem descendentes'
+        }
+
+        if (filhos == 1){
+            div_display.innerHTML= "Filho único"
+        }
+
+        if (filhos>=2){
+            div_display.innerHTML= "Crescei e multiplicai-vos!"
+        }
+    }
+
+
+</script>

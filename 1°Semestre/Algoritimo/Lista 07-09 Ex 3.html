@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas Coloridas</title>
+</head>
+<body>
+    
+<Button onclick="carnes()" style="background-color: red; color: white;" >Carnes</Button>
+<Button onclick="legumes()" style="color: yellow; background-color: black;">Legumes</Button>
+<Button onclick="frutas()"style="color: white; background-color: green;">Frutas</Button>
+
+<div id=div> </div>
+
+</body>
+</html>
+
+<script>
+
+function carnes(){
+  
+    div.innerHTML= 'Só no churrasco' ;
+    div.style.backgroundColor='red';
+    div.style.color='white';
+    document.title='Último clique: Botão de Carnes';
+}
+
+
+function legumes(){
+    div.innerHTML='Até que passa';
+    div.style.backgroundColor='black'
+    div.style.color='yellow'   
+    document.title='Último clique: Botão de legumes';
+}
+
+function frutas(){
+    div.innerHTML=' Fruta é vida';
+    document.title='Último clique: Botão de frutas';
+    div.style.backgroundColor='green'
+    div.style.color='white'
+
+}
+
+</script>

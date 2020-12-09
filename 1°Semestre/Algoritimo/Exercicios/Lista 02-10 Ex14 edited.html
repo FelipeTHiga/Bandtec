@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luta
+    </title>
+    <link rel="stylesheet" href="./Lista 02-10 Ex14 edited styles.css">
+</head>
+
+<body style="margin: 0;">
+
+    <center>
+
+
+        <div id="div_fundo"
+        style = "height:720px; background-image: url(https://3.bp.blogspot.com/-ZMLggk05rw0/V4NVZOhvv3I/AAAAAAAArKE/_5Yi3e-LYjMxRcsMLl_tZFSMIAqdlLCVQCLcB/s1600/steamworkshop_webupload_previewfile_158436341_preview.png);">
+            <button onclick="start()" id="button_start" style='margin-left: 30px;'>Reiniciar Jogo</button>
+
+            <div style="display: block; margin-left: 25%; margin-top: 100px;" id="div_jogo">
+                <div id="div_lutadorA" style="float: left;">
+                    <img src='./Imagens/Lista 02-10 Ex14..jpeg' alt="Scorpion" onclick="golpe_a()">
+
+                    <div id="lifebar_a"
+                        style="width: 100%; height: 30px; background-color: rgb(77, 197, 7); float: left;">
+                    </div>
+
+                    <div style="height: 30px;background-color: black; width: 100%; "></div>
+                    <br>
+
+                    <div id="xbar_a"
+                        style="width: 0%; height: 15px; background-color: rgb(216, 141, 27); float: left; margin-top:2.5px;">
+                    </div>
+
+                    <div img style="height: 20px;background-color: black; width: 100%; " ></div>
+                   
+                    <img src="./Imagens/X.png" style="height:100px; margin-top: 20px;  display: none;" class="img" id="x_on_b" onclick="xrayA()">
+
+                </div>
+
+
+                <div style="float: left;">
+                    <img src="./Imagens/Vs.png" alt="" style="width: 100px; margin-top: 100px ;">
+                </div>
+
+                <div id="div_lutadorB" style="float: left;">
+                    <img src="./Imagens/Lista 02-10 Ex14.(2 )jpeg.jpeg" alt="Subzero" onclick="golpe_b()">
+                    <div id="lifebar_b"
+                        style="width: 100%; height: 30px; background-color: rgb(77, 197, 7); float: right;"></div>
+
+                    <div style="height: 30px;background-color: black; width: 100%; "></div>
+                    <br>
+
+                    <div id="xbar_b"
+                        style="width: 0%; height: 15px; background-color: rgb(216, 141, 27); float: right; margin-top:2.5px;">
+                    </div>
+
+                    <div img style="height: 20px;background-color: black; width: 100%;"></div>
+                    <img src="./Imagens/X.png" style="height:100px; margin-top: 20px; display: none;" class="img" id="x_on_a" onclick="xrayB()">
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </center>
+
+</body>
+
+</html>
+
+<script>
+    var vida_a = 100
+    var vida_b = 100
+    var golpes_feitos_a = 0
+    var golpes_feitos_b = 0
+
+    function golpe_a() {
+        vida_a -= 5
+        lifebar_a.style.width = `${vida_a}%`
+
+        if (vida_a < 50) {
+            lifebar_a.style.backgroundColor = 'yellow'
+        }
+        if (vida_a < 20) {
+            lifebar_a.style.backgroundColor = 'red'
+        }
+
+        golpes_feitos_b += 1
+        if (golpes_feitos_b * 20 <= 100) {
+            xbar_b.style.width = `${golpes_feitos_b * 20}%`
+        } else if(golpes_feitos_b*20>=100){
+            x_on_a.style.display = 'block'
+
+        }
+
+
+    }
+
+    function golpe_b() {
+        vida_b -= 5
+        lifebar_b.style.width = `${vida_b}%`
+        if (vida_b < 50) {
+            lifebar_b.style.backgroundColor = 'yellow'
+        }
+        if (vida_b < 20) {
+            lifebar_b.style.backgroundColor = 'red'
+
+        }
+
+        golpes_feitos_a += 1
+
+        if (golpes_feitos_a * 20 <= 100) {
+            xbar_a.style.width = `${20*golpes_feitos_a}%`
+        } else if (golpes_feitos_a * 20>=100){
+            x_on_b.style.display = 'block'
+        }
+
+    }
+    function start() {
+        div_fundo.style = style = "height:720px; background-image: url(https://3.bp.blogspot.com/-ZMLggk05rw0/V4NVZOhvv3I/AAAAAAAArKE/_5Yi3e-LYjMxRcsMLl_tZFSMIAqdlLCVQCLcB/s1600/steamworkshop_webupload_previewfile_158436341_preview.png);"
+        div_jogo.style.display = 'block'
+        vida_a = 100
+        vida_b = 100
+        golpes_feitos_a = 0
+        golpes_feitos_b = 0
+        lifebar_b.style.width = `${vida_b}%`
+        lifebar_b.style.backgroundColor = 'rgb(77, 197, 7)'
+        lifebar_a.style.width = `${vida_a}%`
+        lifebar_a.style.backgroundColor = 'rgb(77, 197, 7)'
+        xbar_a.style.width = `0%`
+        xbar_b.style.width = `0%`
+        x_on_a.style.display = 'none'
+        x_on_b.style.display = 'none'
+    }
+
+
+    function xrayA(){
+        if (golpes_feitos_a*30>=100){
+            vida_b-=20
+        }
+        lifebar_b.style.width = `${vida_b}%`
+        if (vida_b < 50) {
+            lifebar_b.style.backgroundColor = 'yellow'
+        }
+        if (vida_b < 30) {
+            lifebar_b.style.backgroundColor = 'red'
+        
+        }
+        if(vida_b<0){
+         lifebar_b.style.backgroundColor = 'black'
+        }
+    
+        golpes_feitos_a =0
+        x_on_b.style.display = 'none'
+        xbar_a.style.width = `0%`
+    }
+
+    function xrayB(){
+        if (golpes_feitos_b*30>=100){
+            vida_a-=20
+        }
+        lifebar_a.style.width = `${vida_a}%`
+        if (vida_a < 50) {
+            lifebar_a.style.backgroundColor = 'yellow'
+        }
+        if (vida_a < 30) {
+            lifebar_a.style.backgroundColor = 'red'
+        
+        }
+        if(vida_a<0){
+         lifebar_a.style.backgroundColor = 'black'
+        }
+    
+        golpes_feitos_b =0
+        x_on_a.style.display = 'none'
+        xbar_b.style.width = `0%`
+    }
+</script>

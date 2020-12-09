@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual time grande de São Paulo você torce?
+    <select name="" id="in_time">
+        <option value="0">--Selecione seu time --</option>
+        <option value="./Imagens/cor.png">Corinthians</option>
+        <option value="./Imagens/Pal.png">Palmeiras</option>
+        <option value="./Imagens/santos.png">Santos</option>
+        <option value="./Imagens/saopaulo.png">São Paulo</option>
+    </select>
+<div>
+    <img src="" id="img_time" style="width: 300px;">
+
+</div>
+
+    <button onclick="exibir()">Ver escudo</button>
+   
+</body>
+</html>
+
+<script>
+    function exibir(){
+        var time = in_time.value
+
+        img_time.src=time
+    }
+
+
+
+
+</script>

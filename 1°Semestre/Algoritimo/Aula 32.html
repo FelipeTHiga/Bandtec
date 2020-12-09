@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite algo:
+    <input id="in_frase" onkeyup="analisar()">
+
+    <br>
+    Quantidade de letras: <b id="qtd_letras"></b>
+    <br>
+    Começa com a? <b id="tag_comeca_com_a"></b>
+
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var frase = in_frase.value
+
+        var letras = frase.length
+
+        qtd_letras.innerHTML = letras
+
+        var comeca_com_a = frase.startsWith('a')
+        tag_comeca_com_a.innerHTML = comeca_com_a
+    }
+
+
+
+</script>

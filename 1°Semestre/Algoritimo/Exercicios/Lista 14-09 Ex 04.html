@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A história de uma pizza</title>
+</head>
+<body>
+    <h2>A históriade de uma pizza</h2>
+    <button onclick="inteira()">Acabou de chegar</button>
+    <button onclick="incompleta()">Depois de 1 minuto </button>
+    <button onclick="metade()">Depois de 5 minutos</button>
+    <button onclick="acabada()">Depois de 15 minutos </button>
+    <br><br>
+   
+    <img src="" id="pizza" style="width: 500px;">
+
+</body>
+</html>
+
+<script>
+    function inteira(){ 
+        pizza.src="https://s3.pixers.pics/pixers/700/FO/71/27/57/78/700_FO71275778_239bc690c49f5aacae464cbac4f1e64d.jpg"
+        pizza.alt="Pizza inteira"
+    }
+    
+    function incompleta(){
+        pizza.src="https://cdn5.colorir.com/desenhos/color/201352/pizza-de-pepperoni-comida-pan-y-pasta-pintado-por-negra159-9870772.jpg"
+        pizza.alt="Pizza faltando pedaços"
+    }
+    
+    function metade(){
+        pizza.src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXXvVApK5MCoYQjQ847JLxtHj2fiKsgU-NKw&usqp=CAU"
+        pizza.alt="Pizza pela metade"
+    }
+    
+    function acabada(){
+        pizza.src="https://thumbs.dreamstime.com/b/prato-branco-sujo-e-vazio-com-garfo-sobre-mesa-de-madeira-161307032.jpg"
+        pizza.alt="Prato vazio"
+    }
+
+
+</script>

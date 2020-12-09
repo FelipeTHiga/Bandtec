@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheque especial</title>
+</head>
+<body>
+    Insira o saldo da conta <br>
+    <input type="text" id="id_saldo" >
+    <br>
+    Insira o valor do débito <br>
+    <input type="text" id="id_debito"><br>
+    <button onclick="analisar()">Analisar conta</button>
+    <div id="divDisplay"></div>
+
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var saldo = Number(id_saldo.value)
+        var debito = Number(id_debito.value)
+        var newSaldo = saldo-debito
+        
+        divDisplay.style="color: black;"
+        divDisplay.innerHTML=`O saldo atual da conta corrente é R$${newSaldo.toFixed(2)}`
+
+        if(newSaldo<0){
+            divDisplay.style="color: red;"
+        }
+
+    }
+
+</script>

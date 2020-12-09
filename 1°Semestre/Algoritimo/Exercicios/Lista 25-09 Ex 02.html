@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro do carro</title>
+</head>
+
+<body>
+    <center>
+        Insira a quantidade de infrações já cometidas pelo motorista <br>
+        <input type="text" id="in_infracao">
+
+        <br><br>
+        Insira o valor do carro <br>
+        <input type="text" id="in_valor">
+
+        <br>
+        <button onclick="calcular()">Calcular seguro</button>
+    </center>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var infracao = Number(in_infracao.value)
+        var valor = Number(in_valor.value)
+        var seguro = 0.015 * valor
+
+        if (infracao < 3) {
+            seguro = seguro * 0.9
+        }
+        alert(`Valor do seguro é R$${seguro}`)
+
+    }
+
+
+
+</script>
