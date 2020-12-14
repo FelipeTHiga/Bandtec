@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+
+<body>
+
+    Insira o nome do filme:
+    <input type="text" placeholder="Nome do filme" id="input_filme">
+    <br>
+    <button onclick="cadastrar()">Cadastrar filme</button>
+    <button onclick="verificar()">Verificar duplicidade</button>
+
+</body>
+
+</html>
+
+
+<script>
+    var filmes=[]
+    
+    function cadastrar(){
+        var novo_filme=input_filme.value
+
+        filmes.push(novo_filme)
+    }
+
+    function verificar(){
+        var qtd_repeticao = 0
+        var filme_pesquisado=input_filme.value
+
+        for(contador=0;contador<filmes.length;contador++){
+            if(filme_pesquisado==filmes[contador]){
+                qtd_repeticao++
+            }
+        }
+        
+        alert(`O filme ${filme_pesquisado} aparece ${qtd_repeticao} vezes.`)
+    }
+            
+
+
+
+
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    Nome do aluno: <br>
+    <input type="text" id="input_aluno"> <br>
+    Inicial do nome: <br>
+    <input type="text" maxlength="1" style="text-transform: uppercase;" id="input_inicial">
+
+    <button onclick="cadastrarAluno()">Cadastrar aluno</button>
+    <button onclick="verificarAluno()">Verificar</button>
+
+
+</body>
+</html>
+
+<script>
+    var alunos=[];
+
+    function cadastrarAluno(){
+        alunos.push(input_aluno.value)
+    };
+
+    function verificarAluno(){
+        var letra_inicial= input_inicial.value
+
+        var alunos_econtrados = 0
+        
+        for(contador=0; contador<alunos.length;contador++){
+            if(alunos[contador].toLowerCase().startsWith(letra_inicial.toLowerCase())){
+                alunos_econtrados++
+            }
+        }
+
+        if(alunos_econtrados==0){
+            alert('Não há alunos cadastrados com essa inicial')
+        }
+        else{
+            alert(`Quantidade de alunos com a inicial ${letra_inicial}: ${alunos_econtrados}`)
+        }
+    };
+
+</script>
