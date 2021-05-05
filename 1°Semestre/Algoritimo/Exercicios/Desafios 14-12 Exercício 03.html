@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+
+    Digite um número:
+    <input type="text" id="input_numero">
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <br><br>
+    <select name="" id="input_select"> 
+        <option value="busca_completa">Busca completa</option>
+        <option value="busca_first_item">Busca first-item</option>
+    </select>
+
+    <button onclick="pesquisar()">Pesquisar</button>
+
+</body>
+</html>
+
+<script>
+    var lista_numeros=[];
+
+    function cadastrar(){
+        lista_numeros.push(input_numero.value)
+    };
+
+    function pesquisar(){
+        var filtro_pesquisa=input_select.value
+
+        var ocorrencias=0
+        
+        if(filtro_pesquisa=='busca_completa'){
+            for(contador=0;contador<lista_numeros.length;contador++){
+                if(lista_numeros[contador]==input_numero.value){
+                    ocorrencias++
+                }
+            }
+            alert(`Total de ocorrências: ${ocorrencias}`)
+        }
+
+        else{
+            var posicao_encontrada=0
+            for(contador=0;contador<lista_numeros.length;contador++){
+                if(lista_numeros[contador]==input_numero.value){
+                   posicao_encontrada=contador+1
+                    break
+                }
+            }
+            
+            if(posicao_encontrada>0){
+                alert(`Posição do número pesquisado: ${posicao_encontrada}`)
+            }
+            else{
+                alert('O número pesquisado não esta na lista')
+
+            }
+
+
+        }
+
+
+
+    }
+
+</script>
